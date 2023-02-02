@@ -5,7 +5,29 @@ import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from "./Charts";
 const Repos = () => {
   const { repos } = React.useContext(GithubContext);
 
-  return <h2>repos</h2>;
+  const chartData = [
+    {
+      label: "HTML",
+      value: "13",
+    },
+    {
+      label: "CSS",
+      value: "95",
+    },
+    {
+      label: "Javascript",
+      value: "80",
+    },
+  ];
+
+  return (
+    <section className="section">
+      <Wrapper className="section-center">
+        {/* <ExampleChart data={chartData}/> */}
+        <Pie3D data={chartData} />
+      </Wrapper>
+    </section>
+  );
 };
 
 const Wrapper = styled.section`
@@ -42,90 +64,89 @@ const Wrapper = styled.section`
 `;
 export default Repos;
 
-const userHands = 65
-
+const userHands = 65;
 
 const test = {
-"fullName": '',
-"firstName":'',
-"middleName": '',
-"lastName": '',
-"jbRef": '',
-"creditors": {
-      "creditor1": '', 
-       "creditor2":'' ,
-},
-  "repaymentAmount": {
-    "repaymentAmount1": '',
-    "repaymentAmount2": '',
-    "repaymentAmount3":  '',
-    "repaymentAmount4": ''
+  fullName: "",
+  firstName: "",
+  middleName: "",
+  lastName: "",
+  jbRef: "",
+  creditors: {
+    creditor1: "",
+    creditor2: "",
   },
-  "paymentFrequency": {
-    "paymentFrequency1": '',
-    "paymentFrequency2": '',
-    "paymentFrequency3": '', 
-     "paymentFrequency4": ''
+  repaymentAmount: {
+    repaymentAmount1: "",
+    repaymentAmount2: "",
+    repaymentAmount3: "",
+    repaymentAmount4: "",
   },
-  "balance": {
-    "balance1": '',
-    "balance2": '',
-    "balance3": '', 
-     "balance4": ''
+  paymentFrequency: {
+    paymentFrequency1: "",
+    paymentFrequency2: "",
+    paymentFrequency3: "",
+    paymentFrequency4: "",
   },
-  "arrears": {
-    "arrears1": '',
-    "arrears2": '',
-    "arrears3": '',
-    "arrears4": ''
+  balance: {
+    balance1: "",
+    balance2: "",
+    balance3: "",
+    balance4: "",
   },
-  "debtReference": {
-    "debtReference1": '',
-    "debtReference2": '',
-    "debtReference3":  '',
-    "debtReference4":  ''
+  arrears: {
+    arrears1: "",
+    arrears2: "",
+    arrears3: "",
+    arrears4: "",
   },
-  "startDate": {
-    "startDate1": '',
-    "startDate2": '',
-    "startDate3":  '',
-    "startDate4": ''
+  debtReference: {
+    debtReference1: "",
+    debtReference2: "",
+    debtReference3: "",
+    debtReference4: "",
   },
-  "secured": {
-    "secured1": '',
-    "secured2": '',
-    "secured3": '',
-    "secured4": ''
+  startDate: {
+    startDate1: "",
+    startDate2: "",
+    startDate3: "",
+    startDate4: "",
   },
-  "billerCode": {
-    "billerCode1": '',
-    "billerCode2": '',
-    "billerCode3": '',
-    "billerCode4": '',
+  secured: {
+    secured1: "",
+    secured2: "",
+    secured3: "",
+    secured4: "",
   },
-  "billerCodeReference": {
-    "billerCodeReference1": '',
-    "billerCodeReference2": '',
-    "billerCodeReference3": '',
-    "billerCodeReference4": ''
+  billerCode: {
+    billerCode1: "",
+    billerCode2: "",
+    billerCode3: "",
+    billerCode4: "",
   },
-  "paymentReference": {
-    "paymentReference1": '',
-    "paymentReference2":'',
-    "paymentReference3": '', 
-    "paymentReference4":'',
+  billerCodeReference: {
+    billerCodeReference1: "",
+    billerCodeReference2: "",
+    billerCodeReference3: "",
+    billerCodeReference4: "",
   },
- "bsb": {
-    "bsb1": '',
-    "bsb2": '',
-    "bsb3": '', 
-    "bsb4":'',
+  paymentReference: {
+    paymentReference1: "",
+    paymentReference2: "",
+    paymentReference3: "",
+    paymentReference4: "",
   },
- "accountNumber": {
-    "accountNumber1": '',
-    "accountNumber2": '',
-    "accountNumber3": '', 
-    "accountNumber4": '',
+  bsb: {
+    bsb1: "",
+    bsb2: "",
+    bsb3: "",
+    bsb4: "",
   },
-  "confidenceScore": '',
-}
+  accountNumber: {
+    accountNumber1: "",
+    accountNumber2: "",
+    accountNumber3: "",
+    accountNumber4: "",
+  },
+  confidenceScore: "",
+};
